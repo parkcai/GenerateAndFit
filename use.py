@@ -10,18 +10,19 @@ import torch
 if __name__ == "__main__":
     model = FittingModel().to("cuda")
     model.load_state_dict(torch.load("mymodel.pkl"))
-    
-    input_list = [0.9, 4, 4]
+    input_list = [0.9, 2, 4]
     true_output = numericalMethod(input_list)
     processed_input_list = preprocess(input_list)
     processed_input_list = torch.tensor(processed_input_list, dtype=torch.float32).cuda()
     input_dict = {"is_training":False, "input_tensor": processed_input_list}
     pred_output = model(input_dict)
     pred_output = pred_output.detach().cpu().numpy().flatten()[0]
+    print("Input: ", end="")
+    print(input_list)
     print("Predicted output: %.4f"%pred_output)
     print("True output: %.4f"%true_output)
     
-    
+    # test your model's MAE in use_range
     # use_range = [
     #     (-0.5,1.5),
     #     (2.5,8.5),
