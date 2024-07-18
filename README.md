@@ -21,7 +21,7 @@ To run this program, your environment doesn't have to be exactly the same as min
 
 ## How to use it
 
-Firstly, create two folders "data" and "log". (Training datum will be stored in "data" as npy files, and model parameters will be stored in "log" as pkl files. A training diary will also be created in "log".)
+Firstly, create two folders "data" and "log" in the root directory. (Training datum will be stored in "data" as npy files, and model parameters will be stored in "log" as pkl files. A training diary will also be created in "log".)
 
 ![28](https://github.com/user-attachments/assets/b9d6093b-3307-462c-a323-d58b6db6f28a)
 
