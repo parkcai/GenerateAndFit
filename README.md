@@ -57,6 +57,7 @@ By running "use.py", you can compare the predicted output of a specific input wi
 
 You can also test its MAE in different ranges.
 
+If you want to delete training datum and model parameters in "data" and "log", run "control.py". 
 
 
 
